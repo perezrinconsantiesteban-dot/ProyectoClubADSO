@@ -1,8 +1,9 @@
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLUB ADSO - Iniciar Sesión</title> 
+    <title>CLUB ADSO - Iniciar Sesión</title>
     <link rel="stylesheet" href="../Assets/estilos.css">
 </head>
 
@@ -10,27 +11,31 @@
     <div class="contenedor-registro">
         <h2>Iniciar Sesión - Acerías</h2>
 
-        <form id="formLogin" action="" method="post">
+        <form id="formLogin" action="../Modelos/iniciarSesion.php" method="post">
             <div class="grupo-input">
                 <label for="Email">Correo Electrónico:</label>
-                <input type="email" id="Email" required placeholder="correo@ejemplo.com">
+                <input type="email" id="Email" name="email" required placeholder="correo@ejemplo.com">
             </div>
 
             <div class="grupo-input">
                 <label for="Password">Contraseña:</label>
-                <input type="password" id="Password" required placeholder="Ingrese su contraseña">
+                <input type="password" id="Password" name="password" required placeholder="Ingrese su contraseña">
             </div>
 
             <div class="grupo-botones">
                 <button type="submit">Ingresar</button>
                 <button type="reset" class="btn-secundario">Cancelar</button>
             </div>
-            
             <p class="texto-link">
-                ¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a>
+                ¿No tienes una cuenta?
+                <a href="Registro.html">Regístrate aquí</a> 
             </p>
+
+            <p class="mensajeLogin text-danger mt-3 mb-0" role="alert" aria-live="polite"></p>
+
         </form>
     </div>
 </body>
 <script src="../Controladores/login.js"></script>
+
 </html>
